@@ -1,11 +1,17 @@
 import React from 'react'
 import {Page} from "../../app/components/layout/Page"
-
-export const Login =()=> {
+import Logo from "../../public/assets/img/logo.svg"
+export const Login = ()=> {
   return (
     <div className=''>
       <Page>
-        login
+        <div className='w-[90%] flex flex-col justify-center items-center m-auto mt-20'>
+          <img className='w-[200px]' src={Logo.src} alt="Logo do Aplicativo"/>
+          <div className="flex flex-col items-center mt-10 w-full">
+            <input className='outline-none outline-[#DEAB14] w-[90%] h-12 border-none rounded-[20px] bg-[#26292F] pl-10' type="text" name="" id="" placeholder='Usuário ou E-mail'/>
+            <input className='outline-none outline-[#DEAB14] mt-4 w-[90%] h-12 border-none rounded-[20px] bg-[#26292F] pl-10' type="password" name="" id="" placeholder='Senha'/>
+          </div>
+        </div>
       </Page> 
     </div>
   )
