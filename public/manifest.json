@@ -2,12 +2,11 @@
     "name": "GoBusApp",
     "short_name": "GoBus",
     "icons": [],
-    "theme_color": "#FFFFFF",
-    "background_color": "#FFFFFF",
+    "theme_color": "#494C52",
+    "background_color": "#494C52",
     "start_url": "/",
     "display": "standalone",
     "orientation": "portrait",
     "description": "App para ajudar no trasporte público",
     "lang": "pt-BR"
   }
-  
