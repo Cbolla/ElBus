@@ -1,12 +1,20 @@
 {
-    "name": "GoBusApp",
-    "short_name": "GoBus",
-    "icons": [],
-    "theme_color": "#494C52",
-    "background_color": "#494C52",
-    "start_url": "/",
-    "display": "standalone",
-    "orientation": "portrait",
-    "description": "App para ajudar no trasporte público",
-    "lang": "pt-BR"
-  }
+  "background_color": "#2B5797",
+  "description": "APP criado para ajudar no transporte público",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "GoBus",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "GoBus",
+  "start_url": "/",
+  "theme_color": "#FFFFF",
+  "icons": [
+    {
+      "src": "https://yourdomain.com/icons/android-chrome-192x192.png"
+    },
+    {
+      "src": "https://yourdomain.com/icons/apple-touch-icon.png"
+    }
+  ]
+}
