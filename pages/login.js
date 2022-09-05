@@ -1,7 +1,7 @@
 import {Login} from "../features/login"
 
 
-export default function Home() {
+export default function LoginPage() {
   return (
     <div className="">
         <Login/>
