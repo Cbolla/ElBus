@@ -8,7 +8,7 @@ export const Register = () => {
     <div>
         <Page>
           <div className='w-[90%] flex flex-col justify-center items-center m-auto'>  
-          <Header img={Logo.src} />    
+          <Header img={Logo.src} menu="true"/>  
             <img className='w-[200px]' src={Logo.src} alt="Logo do Aplicativo"/>
             <div className="flex flex-col items-center mt-10 w-full">
               <input className='text-white outline-none outline-[#DEAB14] w-[90%] h-12 border-none rounded-[20px] bg-[#26292F] pl-10' type="text" name="name" id="" placeholder='Nome'/>
