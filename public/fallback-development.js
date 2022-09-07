@@ -29,6 +29,8 @@ self.fallback = async request => {
     default:
       return Response.error();
   }
+
+  ;
 };
 /******/ })()
 ;

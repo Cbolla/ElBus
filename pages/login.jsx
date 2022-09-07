@@ -1,15 +1,9 @@
-import {Login} from "../features/login"
-import Head from "next/head"
-
-export default function LoginPage() {
+import React from 'react'
+import {Login} from '../features/login'
+export default function login() {
   return (
-    <div >
+    <div>
         <Login/>
-          <Head>
-            <title>GoBus: Login</title>
-            <meta name="keywords" content="onibus,trasporte,publico"/>
-            <meta name="description" content="App para ajudar com o tranporte público"/>
-        </Head>
     </div>
   )
 }

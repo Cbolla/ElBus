@@ -1,8 +1,7 @@
+import React from 'react'
 
-export default function Home() {
+export default function _offline() {
   return (
-    <div className="">
-        <p>Se conecte a internet, Você esta Offiline</p>
-    </div>
+    <div>_offline</div>
   )
 }
