@@ -2,6 +2,8 @@ import React from 'react'
 import {Page} from "../../app/components/layout/Page"
 import Logo from "../../public/assets/img/logo.svg"
 import Google from "../../public/assets/icons/google-icon.svg"
+import {Screen} from "../../app/components/layout/Screen"
+
 import { useRouter } from 'next/router'
 
 export const Login = ()=> {
@@ -12,7 +14,7 @@ export const Login = ()=> {
   return (
     <div className=''>
       <Page>
-        <div className='w-[90%] flex flex-col justify-center items-center m-auto mt-20'>
+        <Screen>
           <img className='w-[200px]' src={Logo.src} alt="Logo do Aplicativo"/>
           <div className="flex flex-col items-center mt-10 w-full">
             <input className='text-white outline-none outline-[#DEAB14] w-[90%] h-12 border-none rounded-[20px] bg-[#26292F] pl-10' type="text" name="" id="" placeholder='Usuário ou E-mail'/>
@@ -23,7 +25,7 @@ export const Login = ()=> {
             Logar
           </button>
           <img className='cursor-pointer mt-8' src={Google.src} alt="Conta Google" />
-        </div>
+        </Screen>
       </Page> 
     </div>
   )

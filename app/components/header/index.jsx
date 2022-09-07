@@ -1,6 +1,7 @@
 import React from 'react'
 import Arrow from '../../../public/assets/icons/arrow-left.svg'
 import Menu from '../../../public/assets/icons/menu-icon.svg'
+import Logo from '../../../public/assets/img/logo.svg'
 import { useRouter } from 'next/router'
 
 export const Header = (props)=>{
@@ -17,7 +18,7 @@ export const Header = (props)=>{
           <img src={Arrow.src} alt="Voltar"/>
         </div>
 
-        <img src={props.img} alt="Logo do App"/>
+        {props.logo?<img src={Logo.src} alt="Logo do App"/>:<p></p>}
 
         {props.menu ?
         <div className="bg-[#26292F] w-8 h-8 rounded-[10px] flex justify-center items-center cursor-pointer" >
