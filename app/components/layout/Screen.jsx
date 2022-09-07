@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Screen = (props) => {
   return (
-    <div className='w-[90%] flex flex-col justify-center items-center m-auto mt-10'>
+    <div className='w-[90%] h-[100%]   flex flex-col  items-center m-auto '>
         {props.children}
     </div>
   )

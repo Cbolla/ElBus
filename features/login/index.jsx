@@ -11,7 +11,11 @@ export const Login = ()=> {
   let handleClick = () => {
     router.push("/register");
   }
+  let handleClickDashboard = () => {
+    router.push("/dashboard");
+  }
   return (
+
     <div className=''>
       <Page>
         <Screen>
@@ -21,7 +25,7 @@ export const Login = ()=> {
             <input className='text-white outline-none outline-[#DEAB14] mt-4 w-[90%] h-12 border-none rounded-[20px] bg-[#26292F] pl-10' type="password" name="" id="" placeholder='Senha'/>
           </div>
           <p className="mt-4 text-[#9A9A9A] cursor-pointer select-none hover:text-white" onClick={handleClick}>Cadastrar-se</p>
-          <button className="bg-[#D5A518] w-44 h-10 rounded-[20px] mt-6 hover:bg-[#EFCA5D]" onClick={()=>{}}>
+          <button className="bg-[#D5A518] w-44 h-10 rounded-[20px] mt-6 hover:bg-[#EFCA5D]" onClick={handleClickDashboard}>
             Logar
           </button>
           <img className='cursor-pointer mt-8' src={Google.src} alt="Conta Google" />
