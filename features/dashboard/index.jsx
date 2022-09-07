@@ -7,9 +7,13 @@ import {CardSecundary} from "../../app/components/Cards/CardSecundary"
 import Map from "../../public/assets/img/map-img.svg"
 import Complain from "../../public/assets/img/boy-img.svg"
 import Settings from "../../public/assets/img/settings-img.svg"
-
+import { useRouter } from 'next/router'
 
 export const Dashboard = () => {
+  const router = useRouter()
+  const handleClickMap = () => {
+    router.push("/lines")
+  }
 
   return (
     <div className="h-full">
@@ -21,16 +25,16 @@ export const Dashboard = () => {
                 Como podemos ajudar?
               </h1>
               <div className='flex mt-4 w-full overflow-x-scroll min-h-[200px]'>
-                <div className="mr-4"><CardPrimary image={Map.src} alt="Rotas e linhas" text="Linhas e Rotas"/></div>
+                <div className="mr-4" onClick={handleClickMap}><CardPrimary image={Map.src} alt="Rotas e linhas" text="Linhas e Rotas"/></div>
                 <div className="mr-4"><CardPrimary image={Complain.src} alt="Reclame aqui" text="Reclame Aqui"/></div>
                 <div className="mr-4"><CardPrimary image={Settings.src} alt="Configurações" text="Configurações"/></div>
               </div>
               <p className="text-white select-none mt-4">Linhas mais visualizadas</p>   
               <div className='w-full min-h-[30%] flex flex-col items-center overflow-y-scroll'>
-                <CardSecundary mt="2" destiny="Angatuba" localization="Itapetininga"/>
-                <CardSecundary mt="2" destiny="Itapetininga" localization="Angatuba"/>
-                <CardSecundary mt="2" destiny="Gramadinho" localization="Itapetininga"/>
-                <CardSecundary mt="2" destiny="Retiro" localization="Maranhao"/>
+                <CardSecundary mt="2" destiny="Angatuba" localization="Itapetininga" line="Linha 01"/>
+                <CardSecundary mt="2" destiny="Itapetininga" localization="Angatuba" line="Linha 02"/>
+                <CardSecundary mt="2" destiny="Gramadinho" localization="Itapetininga" line="Linha 03"/>
+                <CardSecundary mt="2" destiny="Retiro" localization="Maranhao" line="Linha 04"/>
                 
                 
               </div>
