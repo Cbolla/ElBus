@@ -36,6 +36,36 @@ const MockedSearch = [
     destiny: "Guarei",
     mt: "2"
   },
+  {
+    line: "Linha 01",
+    localization: "Angatuba",
+    destiny: "Itapetininga",
+    mt: "2"
+  },
+  {
+    line: "Linha 02",
+    localization: "Itapetininga",
+    destiny: "Angatuba",
+    mt: "2"
+  },
+  {
+    line: "Linha 03",
+    localization: "Bom Retiro",
+    destiny: "Itapeva",
+    mt: "2"
+  },
+  {
+    line: "Linha 04",
+    localization: "Retiro",
+    destiny: "Goiás",
+    mt: "2"
+  },
+  {
+    line: "Linha 05",
+    localization: "Recha",
+    destiny: "Guarei",
+    mt: "2"
+  },
 ]
 
 
@@ -72,7 +102,7 @@ const MockedSearch = [
 
               <img className='absolute ml-[60%] mt-3' src={Search.src} alt="Lupa" />
             </div>
-            <p className="text-white mt-4">======Selecione a linha desejada======</p>
+            <p className="text-white mt-4 mb-2">======Selecione a linha desejada======</p>
             <div className='ml-3 w-full flex flex-col items-center h-full overflow-y-scroll'>
               {
                 filterSearch.map((p) => {
