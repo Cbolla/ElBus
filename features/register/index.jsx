@@ -5,6 +5,8 @@ import {Header} from "../../app/components/header"
 import {Screen} from "../../app/components/layout/Screen"
 
 export const Register = () => {
+  const name = 1
+
   return (
     <div>
         <Page>
