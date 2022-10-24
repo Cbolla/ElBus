@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "firebase": "^9.12.1",
     "js-cookie": "^3.0.1",
     "mongodb": "^4.9.1",
     "next": "latest",
