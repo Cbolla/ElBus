@@ -8,62 +8,80 @@ import Search from "../../public/assets/icons/search-icon.svg"
 const MockedSearch = [
   {
     line: "Linha 01",
+    localization: "Unimed",
+    destiny: "Vila Mazzei",
+    mt: "2"
+  },
+  {
+    line: "Linha 02",
+    localization: "Taboãozinho",
+    destiny: "Bela Vista",
+    mt: "2"
+  },
+  {
+    line: "Linha 03",
+    localization: "Chamda Grande",
+    destiny: "Chapadinha",
+    mt: "2"
+  },
+  {
+    line: "Linha 04",
+    localization: "Mercadão",
+    destiny: "Nova Itapetininga",
+    mt: "2"
+  },
+  {
+    line: "Linha 05",
+    localization: "Belo Horizonte",
+    destiny: "Santa Inês",
+    mt: "2"
+  },
+  {
+    line: "Linha 06",
     localization: "Angatuba",
     destiny: "Itapetininga",
     mt: "2"
   },
   {
-    line: "Linha 02",
-    localization: "Itapetininga",
-    destiny: "Angatuba",
+    line: "Linha 07",
+    localization: "Duratex",
+    destiny: "Rodoviária",
     mt: "2"
   },
   {
-    line: "Linha 03",
-    localization: "Bom Retiro",
-    destiny: "Itapeva",
+    line: "Linha 08",
+    localization: "Presídio",
+    destiny: "Colégio Agricola",
     mt: "2"
   },
   {
-    line: "Linha 04",
-    localization: "Retiro",
-    destiny: "Goiás",
+    line: "Linha 20",
+    localization: "Rodoviária",
+    destiny: "Tupi",
     mt: "2"
   },
   {
-    line: "Linha 05",
-    localization: "Recha",
-    destiny: "Guarei",
+    line: "Linha 21",
+    localization: "Rodoviária",
+    destiny: "Rechã",
     mt: "2"
   },
   {
-    line: "Linha 01",
-    localization: "Angatuba",
-    destiny: "Itapetininga",
+    line: "Linha 22",
+    localization: "Rodoviária",
+    destiny: "Gramadinho",
     mt: "2"
   },
   {
-    line: "Linha 02",
-    localization: "Itapetininga",
-    destiny: "Angatuba",
+    line: "Linha 24",
+    localization: "Mercadão",
+    destiny: "Retiro",
     mt: "2"
   },
   {
-    line: "Linha 03",
-    localization: "Bom Retiro",
-    destiny: "Itapeva",
-    mt: "2"
-  },
-  {
-    line: "Linha 04",
-    localization: "Retiro",
-    destiny: "Goiás",
-    mt: "2"
-  },
-  {
-    line: "Linha 05",
-    localization: "Recha",
-    destiny: "Guarei",
+    line: "Linha 27",
+    localization: "Mercadão",
+    destiny: "Morro do Alto",
     mt: "2"
   },
 ]
@@ -95,7 +113,7 @@ const MockedSearch = [
       <div>
         <Page>
           <Screen>
-            <Header menu="true" logo="true" />
+            <Header menu="" logo="true" />
             <h1 className="text-white mt-6 text-xl">LINHAS, ROTAS E HORÁRIOS</h1>
             <div className='w-full flex flex-col items-center justify-center'>
               <input onChange={handleSearch} value={searchValue} className='relative text-white focus:outline-none mt-4 pl-4 w-[80%] h-[50px] rounded-[25px] bg-[#26292F]' type="text" name="search" id="search" placeholder="Pesquique Aqui..." />

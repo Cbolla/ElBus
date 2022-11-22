@@ -3,29 +3,8 @@ import Logo from "../../public/assets/img/logo.svg"
 import Google from "../../public/assets/icons/google-icon.svg"
 import { Screen } from "../../app/components/layout/Screen"
 import { useRouter } from 'next/router'
-import {app} from "../../services/firebase"
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-
-const provider = new GoogleAuthProvider();
 
 export const Login = () => {
-const auth = getAuth(app);
-
-const signInGoogle = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        const credential = GoogleAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        const user = result.user;
-        router.push("/dashboard")
-      
-      }).catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = GoogleAuthProvider.credentialFromError(error);
-      });
-}
 
   const router = useRouter()
 
@@ -53,7 +32,7 @@ const signInGoogle = () => {
             <button className="bg-[#D5A518] w-44 h-10 rounded-[20px] mt-6 hover:bg-[#EFCA5D]" onClick={handleDashboard}>
               Logar
             </button>
-            <img onClick={signInGoogle} className='cursor-pointer mt-8' src={Google.src} alt="Conta Google" />
+            <img onClick={""} className='cursor-pointer mt-8' src={Google.src} alt="Conta Google" />
         </Screen>
       </Page>
     </div>

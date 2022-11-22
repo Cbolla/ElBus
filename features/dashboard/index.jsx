@@ -19,7 +19,7 @@ export const Dashboard = () => {
     <div className="h-full">
         <Page>
             <Screen>
-              <Header menu="true" logo="true"/>
+              <Header menu="" logo="true"/>
               <h1 className='text-white text-xl mt-10 mr-auto select-none'>
                 Bem Vindo(a),<br/>
                 Como podemos ajudar?
