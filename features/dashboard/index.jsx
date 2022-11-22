@@ -24,10 +24,8 @@ export const Dashboard = () => {
                 Bem Vindo(a),<br/>
                 Como podemos ajudar?
               </h1>
-              <div className='flex mt-4 w-full overflow-x-scroll min-h-[200px]'>
+              <div className='flex mt-4 w-full min-h-[200px] justify-center'>
                 <div className="mr-4" onClick={handleClickMap}><CardPrimary image={Map.src} alt="Rotas e linhas" text="Linhas e Rotas"/></div>
-                <div className="mr-4"><CardPrimary image={Complain.src} alt="Reclame aqui" text="Reclame Aqui"/></div>
-                <div className="mr-4"><CardPrimary image={Settings.src} alt="Configurações" text="Configurações"/></div>
               </div>
               <p className="text-white select-none mt-4">Linhas mais visualizadas</p>   
               <div className='w-full min-h-[30%] flex flex-col items-center overflow-y-scroll'>
