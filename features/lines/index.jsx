@@ -1,93 +1,16 @@
-import { React, useMemo, useState } from 'react'
+const sheetdb = require("sheetdb-node");
+import { React, useMemo, useState, useEffect } from 'react'
 import { Page } from './../../app/components/layout/Page';
 import { Screen } from './../../app/components/layout/Screen';
 import { Header } from './../../app/components/header';
 import { CardSecundary } from './../../app/components/Cards/CardSecundary';
 import Search from "../../public/assets/icons/search-icon.svg"
 
-const MockedSearch = [
-  {
-    line: "Linha 01",
-    localization: "Unimed",
-    destiny: "Vila Mazzei",
-    mt: "2"
-  },
-  {
-    line: "Linha 02",
-    localization: "Taboãozinho",
-    destiny: "Bela Vista",
-    mt: "2"
-  },
-  {
-    line: "Linha 03",
-    localization: "Chamda Grande",
-    destiny: "Chapadinha",
-    mt: "2"
-  },
-  {
-    line: "Linha 04",
-    localization: "Mercadão",
-    destiny: "Nova Itapetininga",
-    mt: "2"
-  },
-  {
-    line: "Linha 05",
-    localization: "Belo Horizonte",
-    destiny: "Santa Inês",
-    mt: "2"
-  },
-  {
-    line: "Linha 06",
-    localization: "Angatuba",
-    destiny: "Itapetininga",
-    mt: "2"
-  },
-  {
-    line: "Linha 07",
-    localization: "Duratex",
-    destiny: "Rodoviária",
-    mt: "2"
-  },
-  {
-    line: "Linha 08",
-    localization: "Presídio",
-    destiny: "Colégio Agricola",
-    mt: "2"
-  },
-  {
-    line: "Linha 20",
-    localization: "Rodoviária",
-    destiny: "Tupi",
-    mt: "2"
-  },
-  {
-    line: "Linha 21",
-    localization: "Rodoviária",
-    destiny: "Rechã",
-    mt: "2"
-  },
-  {
-    line: "Linha 22",
-    localization: "Rodoviária",
-    destiny: "Gramadinho",
-    mt: "2"
-  },
-  {
-    line: "Linha 24",
-    localization: "Mercadão",
-    destiny: "Retiro",
-    mt: "2"
-  },
-  {
-    line: "Linha 27",
-    localization: "Mercadão",
-    destiny: "Morro do Alto",
-    mt: "2"
-  },
-]
-
+const client = sheetdb({ address: 'gplx9cfxp3wx9',auth_login: 'ehd3m4gj',
+auth_password: '9m66iibhten3ww3wfumo',});
 
   export const Lines = () => {
+    const [linhas,setLinhas] = useState([])
     const [searchValue, setSearchValue] = useState("");
 
     const handleSearch = (e) => {
@@ -95,20 +18,33 @@ const MockedSearch = [
     }
 
     const filterSearch = useMemo(() => {
-      !searchValue && MockedSearch
+      !searchValue && linhas
       const term = searchValue.toLowerCase();
     
       const contains = (str) =>
         str.toLowerCase().indexOf(term) !== -1;
+        console.log(linhas,"aqui")
+      return linhas?.filter((p) => {
+        return contains(p.local) || contains(p.destino);})
     
-      return MockedSearch.filter((p) => {
-        return contains(p.destiny) || contains(p.localization);})
-    
-      }, [searchValue])
+      }, [searchValue,linhas])
 
-
-
-
+      //coletar dados
+      useEffect(()=>{
+        const coletar = async () => {
+          let dataReturn
+          await client.read()
+            .then((data)=>{
+            dataReturn = data
+          })
+          return dataReturn
+        
+        }
+        coletar().then((data)=>{
+          setLinhas(JSON.parse(data))
+        }
+      )
+      },[])
     return (
       <div>
         <Page>
@@ -123,8 +59,8 @@ const MockedSearch = [
             <p className="text-white mt-4 mb-2">======Selecione a linha desejada======</p>
             <div className='ml-3 w-full flex flex-col items-center h-full overflow-y-scroll'>
               {
-                filterSearch.map((p) => {
-                  return <CardSecundary line={p.line} localization={p.localization} destiny={p.destiny} mt={p.mt} />
+                filterSearch?.map((p) => {
+                  return <CardSecundary line={p.linha} localization={p.local} destiny={p.destino} mt={p.mt} />
                 })
               }
 
