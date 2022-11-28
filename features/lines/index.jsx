@@ -60,7 +60,7 @@ auth_password: '9m66iibhten3ww3wfumo',});
             <div className='ml-3 w-full flex flex-col items-center h-full overflow-y-scroll'>
               {
                 filterSearch?.map((p) => {
-                  return <CardSecundary line={p.linha} localization={p.local} destiny={p.destino} mt={p.mt} />
+                  return <CardSecundary line={p.linha} localization={p.local} destiny={p.destino} mt={"2"} />
                 })
               }
 

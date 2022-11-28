@@ -1,6 +1,6 @@
 {
-    "name": "GoBus",
-    "short_name": "GoBus",
+    "name": "ElBus",
+    "short_name": "ElBus",
     "icons": [
       {
         "src": "/icons/icon-48x48.png",
@@ -36,7 +36,7 @@
     ],
     "theme_color": "#FFFFFF",
     "background_color": "#FFFFFF",
-    "start_url": "/login",
+    "start_url": "/lines",
     "display": "standalone",
     "orientation": "portrait"
   }

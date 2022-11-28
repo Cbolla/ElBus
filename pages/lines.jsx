@@ -5,7 +5,7 @@ export default function LoginPage() {
   return (
     <div >
           <Head>
-            <title>GoBus: Login</title>
+            <title>ELBUS: Login</title>
             <meta name="keywords" content="onibus,trasporte,publico"/>
             <meta name="description" content="App para ajudar com o tranporte público"/>
         </Head>

@@ -5,7 +5,7 @@ export default function DashboardPage() {
   return (
     <div>
       <Head>
-        <title>GoBus: DashBoard</title>
+        <title>ELBUS: DashBoard</title>
         <meta name="keywords" content="onibus,trasporte,publico"/>
         <meta name="description" content="App para ajudar com o tranporte público"/>
       </Head>
