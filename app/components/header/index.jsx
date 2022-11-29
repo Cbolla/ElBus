@@ -13,7 +13,7 @@ export const Header = (props)=>{
 
 
   return (
-    <div className='w-full flex justify-between items-center'>
+    <div className=' select-none w-full flex justify-between items-center'>
         <div className="bg-[#26292F] w-8 h-8 rounded-[10px] flex justify-center items-center cursor-pointer" onClick={handleOnClick}>
           <img src={Arrow.src} alt="Voltar"/>
         </div>

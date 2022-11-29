@@ -6,8 +6,8 @@ import { Header } from './../../app/components/header';
 import { CardSecundary } from './../../app/components/Cards/CardSecundary';
 import Search from "../../public/assets/icons/search-icon.svg"
 
-const client = sheetdb({ address: 'gplx9cfxp3wx9',auth_login: 'ehd3m4gj',
-auth_password: '9m66iibhten3ww3wfumo',});
+const client = sheetdb({ address: 'ko22hgud347gh',auth_login: '1wu6dwvj',
+auth_password: 'smzidxxk452t2t60cqiz'});
 
   export const Lines = () => {
     const [linhas,setLinhas] = useState([])
@@ -23,7 +23,7 @@ auth_password: '9m66iibhten3ww3wfumo',});
     
       const contains = (str) =>
         str.toLowerCase().indexOf(term) !== -1;
-        console.log(linhas,"aqui")
+
       return linhas?.filter((p) => {
         return contains(p.local) || contains(p.destino);})
     
