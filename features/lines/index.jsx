@@ -5,14 +5,16 @@ import { Screen } from './../../app/components/layout/Screen';
 import { Header } from './../../app/components/header';
 import { CardSecundary } from './../../app/components/Cards/CardSecundary';
 import Search from "../../public/assets/icons/search-icon.svg"
+import { useRouter } from 'next/router';
 
 const client = sheetdb({ address: 'ko22hgud347gh',auth_login: '1wu6dwvj',
 auth_password: 'smzidxxk452t2t60cqiz'});
 
   export const Lines = () => {
+
     const [linhas,setLinhas] = useState([])
     const [searchValue, setSearchValue] = useState("");
-
+    
     const handleSearch = (e) => {
       setSearchValue(e.target.value)
     }
@@ -60,7 +62,7 @@ auth_password: 'smzidxxk452t2t60cqiz'});
             <div className='ml-3 w-full flex flex-col items-center h-full overflow-y-scroll'>
               {
                 filterSearch?.map((p) => {
-                  return <CardSecundary line={p.linha} localization={p.local} destiny={p.destino} mt={"2"} />
+                  return <CardSecundary line={p.linha} localization={p.local}destiny={p.destino} mt={"2"} />
                 })
               }
 
