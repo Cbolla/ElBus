@@ -5,7 +5,6 @@ import { Screen } from './../../app/components/layout/Screen';
 import { Header } from './../../app/components/header';
 import { CardSecundary } from './../../app/components/Cards/CardSecundary';
 import Search from "../../public/assets/icons/search-icon.svg"
-import { useRouter } from 'next/router';
 
 const client = sheetdb({ address: 'ko22hgud347gh',auth_login: '1wu6dwvj',
 auth_password: 'smzidxxk452t2t60cqiz'});
@@ -61,8 +60,10 @@ auth_password: 'smzidxxk452t2t60cqiz'});
             <p className="text-white mt-4 mb-2">======Selecione a linha desejada======</p>
             <div className='ml-3 w-full flex flex-col items-center h-full overflow-y-scroll'>
               {
-                filterSearch?.map((p) => {
-                  return <CardSecundary line={p.linha} localization={p.local}destiny={p.destino} mt={"2"} />
+                filterSearch?.map((p,indice) => {
+                  console.log(p)
+                  return <CardSecundary indice={indice} line={p.linha} localization={p.local}destiny={p.destino} mt={"2"} />
+                  
                 })
               }
 

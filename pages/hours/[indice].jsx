@@ -1,5 +1,5 @@
 import Head from "next/head"
-import {Hours} from "../features/hours"
+import {Hours} from "../../features/hours"
 
 export default function HoursPage() {
   return (
