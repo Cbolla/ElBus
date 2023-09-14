@@ -1,5 +1,6 @@
 const mysql = require('mysql2/promise');
 const dotenv = require('dotenv'); // Importe a biblioteca dotenv
+dotenv.config();
 
 // Configurações de conexão
 const dbConfig = {

@@ -3,6 +3,7 @@ import {Page} from "../../app/components/layout/Page"
 import { Header } from "../../app/components/header"
 import {Screen} from "../../app/components/layout/Screen"
 import {CardPrimary} from "../../app/components/Cards/CardPrimary"
+import Complain from "../../public/assets/img/complain.svg"
 import Map from "../../public/assets/img/map-img.svg"
 import { useRouter } from 'next/router'
 import { useEffect,useState } from 'react'
@@ -19,6 +20,9 @@ export const Dashboard = () => {
   const router = useRouter()
   const handleClickMap = () => {
     router.push("/lines")
+  }
+  const handleClickReclamar = () => {
+    router.push("/reclame")
   }
 
   useEffect(()=>{
@@ -49,6 +53,7 @@ export const Dashboard = () => {
               </h1>
               <div className='flex mt-4 w-full min-h-[200px] justify-center'>
                 <div className="mr-4" onClick={handleClickMap}><CardPrimary image={Map.src} alt="Rotas e linhas" text="Linhas e Rotas"/></div>
+                <div className="mr-4" onClick={handleClickReclamar}><CardPrimary image={Complain.src} alt="Rotas e linhas" text="Reclame Aqui"/></div>
               </div>
               <p className="text-white select-none mt-4">Notícias</p>   
               <div className="w-full flex justify-center">
