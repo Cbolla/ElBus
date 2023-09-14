@@ -9,10 +9,10 @@
     "dotenv": "^16.3.1",
     "js-cookie": "^3.0.1",
     "mysql2": "^3.6.1",
-    "next": "latest",
+    "next": "^13.4.19",
     "next-pwa": "5.4.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "sheetdb-node": "^0.0.12"
   },
   "devDependencies": {

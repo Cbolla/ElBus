@@ -2,7 +2,7 @@ import { Page } from "../../app/components/layout/Page"
 import Logo from "../../public/assets/img/logo.svg"
 import { Screen } from "../../app/components/layout/Screen"
 import { useRouter } from 'next/router'
-// import { login } from '../../db/consultaLogin.js'; // Importe sua função de login
+import { login } from '../../db/consultaLogin.js'; // Importe sua função de login
 import { useState } from "react";
 
 export const Login = () => {

@@ -46,12 +46,12 @@ export const Dashboard = () => {
         <Page>
           {console.log(noticias)}
             <Screen>
-              <Header menu="" logo="true"/>
+              <Header menu="a" logo="true"/>
               <h1 className='text-white text-xl mt-10 mr-auto select-none'>
                 Bem Vindo(a),<br/>
                 Como podemos ajudar?
               </h1>
-              <div className='flex mt-4 w-full min-h-[200px] justify-center'>
+              <div className='flex mt-4 w-full min-h-[200px] justify-center ml-4'>
                 <div className="mr-4" onClick={handleClickMap}><CardPrimary image={Map.src} alt="Rotas e linhas" text="Linhas e Rotas"/></div>
                 <div className="mr-4" onClick={handleClickReclamar}><CardPrimary image={Complain.src} alt="Rotas e linhas" text="Reclame Aqui"/></div>
               </div>
