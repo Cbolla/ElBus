@@ -13,7 +13,7 @@ export default function HoursPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://sheetsu.com/apis/v1.0su/ad0e6353e76d');
+        const response = await fetch('https://sheetsu.com/apis/v1.0su/605f776845cf');
         const data = await response.json();
 
         if (Array.isArray(data)) {
@@ -25,7 +25,6 @@ export default function HoursPage() {
       } catch (error) {
         console.error(error);
       }
-      console.log( linhas , "olaaaaaaaaaaaaaaaaaaaaaaaaaa")
     };
     
     fetchData();
@@ -37,6 +36,7 @@ export default function HoursPage() {
   return (
     <div >
           <Head>
+            {console.log(linhas[0]?.horario2)}
             <title>ELBUS: Horarios</title>
             <meta name="keywords" content="onibus,trasporte,publico"/>
             <meta name="description" content="App para ajudar com o tranporte público"/>
