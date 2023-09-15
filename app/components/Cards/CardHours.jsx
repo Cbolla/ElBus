@@ -17,6 +17,7 @@ export const  CardHours=(props) => {
                   <p className="flex justify-center">{props.hours4}</p>
                 </div>
             </div>
+            
     </div>
   )
 }
