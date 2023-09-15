@@ -2,8 +2,8 @@ import { Page } from "../../app/components/layout/Page"
 import { Screen } from "../../app/components/layout/Screen"
 import { Header } from './../../app/components/header';
 import { CardHours } from './../../app/components/Cards/CardHours';
-import { useRouter } from 'next/router';
 import { useState,useEffect } from "react";
+import {Map} from "../../app/components/map/MyMap";
 
 
 export const Hours = (props) => {
@@ -47,11 +47,10 @@ export const Hours = (props) => {
           <p className="text-white text-[15px] mt-4">====== TARIFA: R$ 3,50 ======</p>
           <div className="flex justfy-center flex-col items-center">
             <p className="text-white text-[18px] mt-4">Partidas de {props.partida}</p>
-            {horario?.map((p,indice)=>{
-  
-              return <CardHours indice={indice} hours1={horario}/>
-              
-            })}
+            <CardHours hours1='7:20' hours2='7:20' hours3='7:20' hours4='7:20'/>
+            <CardHours hours1='7:20' hours2='7:20' hours3='7:20' hours4='7:20'/>
+            <CardHours hours1='7:20' hours2='7:20' hours3='7:20' hours4='7:20'/>
+            <CardHours hours1='7:20' hours2='7:20' hours3='7:20' hours4='7:20'/>
             
             
             <p className="text-white text-[18px] mt-4">Saida de {props.saida}</p>
@@ -60,6 +59,8 @@ export const Hours = (props) => {
             <CardHours hours1='7:20' hours2='7:20' hours3='7:20' hours4='7:20'/>
             <CardHours hours1='7:20' hours2='7:20' hours3='7:20' hours4='7:20'/>
           </div>
+
+         <div><Map/></div>
         </Screen>
       </Page>
     </div>

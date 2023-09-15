@@ -5,6 +5,7 @@ import { Header } from './../../app/components/header';
 import { CardSecundary } from './../../app/components/Cards/CardSecundary';
 import Search from "../../public/assets/icons/search-icon.svg";
 
+
 export const Lines = () => {
   const [linhas, setLinhas] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -71,6 +72,7 @@ export const Lines = () => {
               return <CardSecundary indice={indice} line={p.linha} localization={p.local} destiny={p.destino} mt={"2"} />;
             })}
           </div>
+          
         </Screen>
       </Page>
     </div>
