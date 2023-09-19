@@ -15,6 +15,8 @@ auth_password: 'smzidxxk452t2t60cqiz'});
 
 export const Dashboard = () => {
   const [noticias,setNoticias] = useState([])
+
+  
   // const [url,setUrl] = useState([])
   // const url = "https://drive.google.com/uc?export=download&id="
   const router = useRouter()
@@ -40,7 +42,7 @@ export const Dashboard = () => {
     )
     // setUrl(noticias[0].imagem)
   },[])
-  // console.log(url)
+ 
   return (
     <div className="h-full">
         <Page>

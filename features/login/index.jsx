@@ -2,10 +2,31 @@ import { Page } from "../../app/components/layout/Page"
 import Logo from "../../public/assets/img/logo.svg"
 import { Screen } from "../../app/components/layout/Screen"
 import { useRouter } from 'next/router'
-// import { login } from '../../db/consultaLogin.js'; // Importe sua função de login
-import { useState } from "react";
+import { useEffect,useState } from 'react'
 
 export const Login = () => {
+  const [resultado, setResultados] = useState([]);
+// ----------------------------------------
+useEffect(() => {
+  // Função para buscar os dados do banco de dados
+  const buscarDadosDoBanco = async () => {
+    try {
+      const response = await fetch('/api/consultarUsuario'); // Use a rota correta da sua API
+      if (response.ok) {
+        const data = await response.json();
+        console.log('Dados da consulta:', data); // Exibe os dados da consulta no console
+      } else {
+        console.error('Erro ao buscar dados:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Erro na solicitação:', error);
+    }
+  };
+
+  buscarDadosDoBanco();
+}, []);
+
+
 
 
   const router = useRouter();
