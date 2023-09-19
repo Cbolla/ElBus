@@ -3,7 +3,7 @@ const bd = require('./bd'); // Importe o módulo de banco de dados que você cri
 async function handler(req, res) {
   try {
     // Realize a consulta usando o módulo de banco de dados
-    const usuarios = await bd.any('SELECT * FROM usuario');
+    const usuarios = await bd.any('SELECT * FROM usuarios');
     
     // Imprima os dados no console
     console.log('Dados da consulta:', usuarios);

@@ -10,6 +10,7 @@ import { useEffect,useState } from 'react'
 import Notice from "../../public/assets/img/notice.png"
 
 
+
 const client = sheetdb({ address: 'ko22hgud347gh',auth_login: '1wu6dwvj',
 auth_password: 'smzidxxk452t2t60cqiz'});
 
@@ -46,7 +47,7 @@ export const Dashboard = () => {
   return (
     <div className="h-full">
         <Page>
-          {console.log(noticias)}
+          {/* {console.log(noticias)} */}
             <Screen>
               <Header menu="a" logo="true"/>
               <h1 className='text-white text-xl mt-10 mr-auto select-none'>
