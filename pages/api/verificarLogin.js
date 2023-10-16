@@ -7,10 +7,10 @@ export default async function handler(req, res) {
     return res.status(405).end(); // Método não permitido (não é um POST)
   }
 
-  const { name, password } = req.body;
+  const { email, password } = req.body;
 
   try {
-    const resultado = await bd.oneOrNone('SELECT * FROM usuarios WHERE name = $1 AND password = $2', [name, password]);
+    const resultado = await bd.oneOrNone('SELECT * FROM usuarios WHERE email = $1 AND password = $2', [email, password]);
     if (resultado !== null) {
       // Usuário autenticado com sucesso
 

@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 export const Login = () => {
   const [resultado, setResultados] = useState([]);
   const router = useRouter();
-  const [formData, setFormData] = useState({ name: '', password: '' });
+  const [formData, setFormData] = useState({ email: '', password: '' });
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
@@ -20,24 +20,27 @@ export const Login = () => {
   }
 
   const clearForm = () => {
-    setFormData({ name: '', password: '' });
+    setFormData({ email: '', password: '' });
   };
 
   const handleLogin = async () => {
     try {
-      const { name, password } = formData;
-
+      const { email, password } = formData;
+  
       // Enviar os dados de login e senha para a API
       const response = await fetch('/api/verificarLogin', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name: name, password: password }),
+        body: JSON.stringify({ email: email, password: password }),
       });
-
+  
       if (response.ok) {
         // Redirecionar para a página de dashboard após o login bem-sucedido
+        const userData = {email: email }; // Substitua isso pelos dados reais do usuário
+        localStorage.setItem('userData', JSON.stringify(userData)); // Armazene os dados do usuário no localStorage
+  
         router.push('/dashboard');
       } else {
         setErrorMessage('Senha ou usuário inválidos');
@@ -58,7 +61,7 @@ export const Login = () => {
         <Screen>
           <img className='w-[200px] mt-6' src={Logo.src} alt="Logo do Aplicativo" />
             <div className="flex flex-col items-center w-full mt-6">
-              <input className='text-white outline-none outline-[#DEAB14] w-[90%] h-12 border-none rounded-[20px] bg-[#26292F] pl-10' type="text" name="name"  placeholder='Nome do Usuário' onChange={handleInputChange} value={formData.name}/>
+              <input className='text-white outline-none outline-[#DEAB14] w-[90%] h-12 border-none rounded-[20px] bg-[#26292F] pl-10' type="text" name="email"  placeholder='Email do Usuário' onChange={handleInputChange} value={formData.email}/>
               
               <input className='text-white outline-none outline-[#DEAB14] mt-4 w-[90%] h-12 border-none rounded-[20px] bg-[#26292F] pl-10' type="password" name="password" placeholder='Senha do Usuario' onChange={handleInputChange} value={formData.password}/>
             </div>
