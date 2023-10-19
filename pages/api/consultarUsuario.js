@@ -1,11 +1,11 @@
-const bd = require('./bd'); // Importe o módulo de banco de dados que você criou
+const bd = require('./bd'); 
 
 async function handler(req, res) {
   try {
-    // Realize a consulta usando o módulo de banco de dados
+    
     const usuarios = await bd.any('SELECT * FROM usuarios');
     
-    // Imprima os dados no console
+    
     console.log('Dados da consulta:', usuarios);
     
     res.status(200).json(usuarios);
@@ -15,4 +15,4 @@ async function handler(req, res) {
   }
 }
 
-module.exports = handler; // Exporte a função handler
+module.exports = handler;

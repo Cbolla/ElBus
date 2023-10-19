@@ -18,6 +18,7 @@ export default function HoursPage() {
 
         if (Array.isArray(data)) {
           setLinhas(data);
+          console.log(linhas)
           
         } else {
           console.error('Invalid data format. Expected an array.');
