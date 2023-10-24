@@ -1,15 +1,15 @@
 import React from 'react'
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 
-export const Map = () => {
+export const Map = (props) => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: "AIzaSyCC8IcLkmnsMkk7M_OKqkVOvIrN86US11M"
   })
   
   const position ={
-    lat:-23.571843,
-    lng:-48.043797,
+    lat:props.lat,
+    lng:props.lng,
   }
 
   return <div className='w-[300px] h-[100px] mt-8]'>

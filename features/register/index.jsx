@@ -47,7 +47,7 @@ export const Register = () => {
         handleClick()
         alert('Registro bem-sucedido! Você pode fazer login agora.');
       } else {
-        alert('Erro ao registrar o usuário.');
+        alert('Erro ao registrar o usuário, email pode ja estar registrado.');
       }
     } catch (error) {
       console.error('Erro ao registrar o usuário:', error);

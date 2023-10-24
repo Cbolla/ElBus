@@ -59,8 +59,9 @@ export const Hours = (props) => {
             <CardHours hours1='7:20' hours2='7:20' hours3='7:20' hours4='7:20'/>
             <CardHours hours1='7:20' hours2='7:20' hours3='7:20' hours4='7:20'/>
           </div>
-
-         <div><Map/></div>
+          <p className="text-white text-[15px] mt-4">====== MAPA ======</p>
+          <div className=" w-full flex justify-center rounded-full"><Map lat={-23.595077} lng={-48.051759} /></div>
+          
         </Screen>
       </Page>
     </div>
