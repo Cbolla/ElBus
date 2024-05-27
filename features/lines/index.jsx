@@ -28,7 +28,7 @@ export const Lines = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://sheetsu.com/apis/v1.0su/605f776845cf');
+        const response = await fetch('https://sheetdb.io/api/v1/fhzvpqanotg66');
         
         const data = await response.json();
 
@@ -61,7 +61,7 @@ export const Lines = () => {
               type="text"
               name="search"
               id="search"
-              placeholder="Pesquique Aqui..."
+              placeholder="Pesquise Aqui..."
             />
 
             <img className="absolute ml-[60%] mt-3" src={Search.src} alt="Lupa" />

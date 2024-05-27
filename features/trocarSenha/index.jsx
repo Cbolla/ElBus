@@ -14,7 +14,7 @@ export const TrocarSenha = () => {
         <input className=' text-white outline-none outline-[#DEAB14] w-[90%] h-12 border-none rounded-[20px] bg-[#26292F] pl-10 mt-8' type="password" name="name" id="" placeholder='Senha Antiga' />
         <input className='text-white outline-none outline-[#DEAB14] w-[90%] h-12 border-none rounded-[20px] bg-[#26292F] pl-10 mt-6' type="password" name="name" id="" placeholder='Nova Senha' />
         <input className='text-white outline-none outline-[#DEAB14] w-[90%] h-12 border-none rounded-[20px] bg-[#26292F] pl-10 mt-6' type="password" name="name" id="" placeholder='Confirmar Senha' />
-        <button className="bg-[#D5A518] w-44 h-12 rounded-[20px] mt-6 hover:bg-[#EFCA5D] text-white " onClick="">
+        <button className="bg-[#D5A518] w-44 h-12 rounded-[20px] mt-6 hover:bg-[#EFCA5D] text-white " onClick={() => alert('Senha Alterada com Sucesso!')}>
           Trocar de senha
         </button>
         </Screen>

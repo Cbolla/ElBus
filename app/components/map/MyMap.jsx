@@ -12,25 +12,27 @@ export const Map = () => {
     lng:-48.043797,
   }
 
-  return <div className='w-[300px] h-[100px] mt-8]'>
-    {isLoaded ?(
-      <GoogleMap
-        mapContainerStyle={{width:'100%', height:'50%', margin:"10px 0"}}
-        center={position}
-        zoom={15}
-      >
-        { /* Child components, such as markers, info windows, etc. */ }
-        <></>
-        <Marker position={position} options={
-          {
-            label: {
-              text:"Ponto de partida",
-              className:""
+  return <div className="map-border">
+    <div className='w-[300px] h-[400px] mt-8]'>
+      {isLoaded ?(
+        <GoogleMap
+          mapContainerStyle={{width:'100%', height:'50%', margin:"10px 0"}}
+          center={position}
+          zoom={15}
+        >
+          { /* Child components, such as markers, info windows, etc. */ }
+          <></>
+          <Marker position={position} options={
+            {
+              label: {
+                text:"Ponto de partida",
+                className:""
+              }
             }
-          }
-        }/>
-      </GoogleMap>
-    ) :(<></>)
-  }
+          }/>
+        </GoogleMap>
+      ) :(<></>)
+    }
+    </div>
   </div>
 }
